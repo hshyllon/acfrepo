@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block meta %}
+    {% endblock %}
+    <title>
+            {% block title %}
+            {% endblock %}
+    </title>
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+
+<body>
+    {% block main_header %}
+    {% endblock %}
+    
+   
+    {% block main_content %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block jscript %}
+    {% endblock %}
+</body>
+
+</html>

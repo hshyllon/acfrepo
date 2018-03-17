@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+<div>
+	<nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+
+		<div class="container">
+			<a class="navbar-brand" href="{% url 'home' %}" style='background-image: url("{% static 'core/img/acfkclogo.png' %}")'><span>ACF MIDWEST</span></a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navcol-1">
+				<ul class="nav navbar-nav mr-auto">
+					<li class="dropdown"><a	class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">About Us</a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" role="presentation" href="{% url 'about' 'mission' %}">Mission Statement</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'about' 'history' %}">History</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'about' 'leadership' %}">Leadership</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'about' 'member' %}">Who can be a member</a>
+						</div></li>
+					<li class="dropdown"><a
+						class="dropdown-toggle nav-link dropdown-toggle"
+						data-toggle="dropdown" aria-expanded="false" href="#">Ministries&nbsp;</a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" role="presentation" href="{% url 'ministry' 'children' %}">Children</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'ministry' 'youth' %}">Youth</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'ministry' 'missions' %}">Missions</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'ministry' 'worship' %}">Worship & Fellowship</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'ministry' 'membership' %}">Membership</a>
+						</div></li>
+					<li class="dropdown"><a
+						class="dropdown-toggle nav-link dropdown-toggle"
+						data-toggle="dropdown" aria-expanded="false" href="#">Resources&nbsp;</a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" role="presentation" href="{% url 'resources' 'devotion' %}">Devotion</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'resources' 'media' %}">Media</a>
+							<a class="dropdown-item" role="presentation" href="{% url 'resources' 'downloads' %}">Downloads</a>
+						</div></li>
+					<li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+				</ul>
+				<span class="navbar-text actions"> <a href="#" class="login">Log
+						In</a><a class="btn btn-light action-button" role="button" href="#">Sign
+						Up</a></span>
+			</div>
+		</div>
+	</nav>
+</div>

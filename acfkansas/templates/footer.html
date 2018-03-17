@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About<i class="icon ion-ios-arrow-down footer-arrow-down"></i></h3>
+                        <ul>
+                            <li><a href="{% url 'about' 'mission' %}">Mission Statement</a></li>
+                            <li><a href="{% url 'about' 'history' %}">History</a></li>
+                            <li><a href="{% url 'about' 'leadership' %}">Leadrship</a></li>
+                            <li><a href="{% url 'about' 'member' %}">Who can be a member?</a></li>
+                          
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Resources<i class="icon ion-ios-arrow-down footer-arrow-down"></i></h3>
+                        <ul>
+                            <li><a href="{% url 'resources' 'devotion' %}">Devotion</a></li>
+                     
+                            <li><a href="{% url 'resources' 'media' %}">Media</a></li>
+                            <li><a href="{% url 'resources' 'downloads' %}">Download</a></li>
+               
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>We meet at<i class="icon ion-ios-arrow-down footer-arrow-down"></i></h3><iframe allowfullscreen="" frameborder="0" width="100%" height="150" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBD1B5lt7pTv5t4QS5E2kDICP1a3gJKvmo&amp;q=8301+LAMAR+AVE+OVERLAND+PARK+KS+66207&amp;zoom=11"></iframe>
+                        <p><i class="typcn typcn-media-record-outline"></i>Tel : 913-749-3898&nbsp;</p>
+                        <p><i class="typcn typcn-media-record-outline"></i>Email : contact@acfkansas.org</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">ACF Kansas Chapter  2018</p>
+            </div>
+        </footer>

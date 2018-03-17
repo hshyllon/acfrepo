@@ -1,0 +1,957 @@
+body {
+  font-family:'Open Sans',sans-serif,Arial;
+  color:#5a5a5a;
+  font-size:16px;
+}
+
+body a {
+  color:#d75608;
+  font-family:'Ubuntu';
+  font-weight:bold;
+}
+
+body a:hover {
+  color:#2c3134;
+}
+
+p {
+  margin-bottom:.5rem;
+}
+
+.carousel-item {
+  transition:-webkit-transform 0.5s ease;
+  transition:transform 0.5s ease;
+  transition:transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility:visible;
+  backface-visibility:visible;
+}
+
+.navbar-light .navbar-brand {
+  width:136px;
+  height:100px;
+}
+
+.navbar.navbar-light.navbar-expand-md.navigation-clean-button {
+  padding-bottom:5px;
+}
+
+.navbar-light .navbar-brand > span {
+  display:none;
+}
+
+.nav.navbar-nav.mr-auto {
+  padding-top:55px;
+}
+
+.navbar-light .navbar-text {
+  padding-top:65px;
+  padding-bottom:0;
+}
+
+@media (max-width: 766px) {
+  .navbar-light .navbar-text {
+    padding-top:5px;
+  }
+}
+
+.dropdown-menu {
+  border:none;
+}
+
+#acf-mw-name {
+  display:block;
+}
+
+.carousel-caption #first-caption {
+  font-family:'Ubuntu';
+  padding-bottom:30px;
+}
+
+@media (max-width: 990px) {
+  .carousel-caption #first-caption {
+    padding-bottom:20px;
+  }
+}
+
+@media (max-width: 766px) {
+  .carousel-caption #first-caption {
+    padding-bottom:5px;
+    font-size:1.2em;
+  }
+}
+
+@media (max-width: 574px) {
+  .carousel-caption #first-caption {
+    padding-bottom:0;
+    font-size:1em;
+  }
+}
+
+.carousel-caption #second-caption {
+  font-family:'Ubuntu';
+  padding-bottom:20px;
+  font-size:1.8rem;
+}
+
+.carousel-caption #second-caption-replace {
+  font-family:'Ubuntu';
+  font-size:1.1rem;
+}
+
+@media (max-width: 1198px) {
+  .carousel-caption #second-caption {
+    padding-bottom:5px;
+    font-size:1.5rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .carousel-caption #second-caption {
+    font-size:1.3rem;
+  }
+}
+
+@media (max-width: 766px) {
+  .carousel-caption #second-caption {
+    font-size:1.1rem;
+  }
+}
+
+@media (max-width: 574px) {
+  .carousel-caption #second-caption {
+    display:none;
+  }
+}
+
+.carousel-caption #first-caption span {
+  font-size:1.8em;
+  font-weight:800;
+}
+
+.carousel-caption #second-caption span {
+  font-size:1.2em;
+  font-weight:800;
+  display:block;
+}
+
+.carousel-caption {
+  bottom:30px;
+}
+
+.caption-rider a.btn {
+  border:3px solid #fff;
+  border-radius:20px;
+  color:#fff;
+  font-weight:800;
+}
+
+@media (max-width: 1198px) {
+  .caption-rider a.btn {
+    font-size:0.8em;
+  }
+}
+
+.caption-rider a.btn:hover {
+  background-color:#fff;
+  color:#2c3134;
+}
+
+.icon.ion-arrow-right-b {
+  margin-left:10px;
+}
+
+.join-us {
+  font-family:'Kaushan Script';
+  font-size:4em;
+  padding:0.2em;
+}
+
+#third-caption {
+  margin-bottom:40px;
+}
+
+section {
+  padding:10px 0;
+}
+
+.home-section-1 {
+  min-height:100px;
+  background-color:rgba(51,51,51,0.12);
+}
+
+section h4 {
+  font-weight:400;
+  font-family:'Ubuntu';
+  font-size:1.6em;
+  border-bottom:1px solid #2c3134;
+  padding-bottom:3px;
+  text-align:center;
+}
+
+.upcoming-events h4 {
+  color:#d75608;
+}
+
+.main-card h5 {
+  font-weight:400;
+  font-family:'Ubuntu';
+  font-size:1.4em;
+  padding:10px;
+  text-align:center;
+  color:#fff;
+  text-shadow:2px 2px 3px #000;
+}
+
+.upcoming-date {
+  background-color:#ffffff;
+  width:15%;
+  margin:2px;
+  padding:2px;
+  float:left;
+  text-align:center;
+}
+
+.upcoming-day {
+  font-family:'PT Sans Narrow';
+  font-size:1.8em;
+  border-bottom:1px solid #24282b;
+  display:block;
+}
+
+.inside-he {
+  border-left:1px;
+  display:block;
+  border-left:1px rgba(44,49,52,0.08) solid;
+  padding:0 0 0 5px;
+  min-height:70px;
+  font-size:.8em;
+}
+
+.upcoming-details-card {
+  padding:0px 5px 5px 17%;
+  min-height:70px;
+  font-weight:700;
+  border-top:1px solid rgba(61,60,60,0.09);
+}
+
+.icon.ion-ios-list-outline, .material-icons {
+  margin:0 10px;
+}
+
+.upcoming-details-card h5 {
+  text-align:center;
+  color:#d75608;
+  font-size:1.4em;
+}
+
+.upcoming-table td {
+  padding:2px;
+}
+
+.tr-left {
+  width:5%;
+  text-align:center;
+}
+
+.table.upcoming-table {
+  padding:0;
+  margin:0;
+}
+
+.upcoming-link, .article-seeall {
+  text-align:center;
+}
+
+.rider-link {
+  text-align:center;
+}
+
+.article-seeall {
+  text-align:center;
+  margin:5px 0 0;
+}
+
+.upcoming-link a.btn {
+  border:2px solid #fccc4e;
+  border-radius:16px;
+  color:#5a5a5a;
+  padding:4px;
+  font-weight:800;
+  font-size:.9em;
+}
+
+.rider-link a.btn {
+  border:2px solid #fccc4e;
+  border-radius:16px;
+  color:#5a5a5a;
+  padding:4px;
+  font-weight:800;
+  font-size:.9em;
+}
+
+.story-link a.btn {
+  border:2px solid #ffffff;
+  border-radius:16px;
+  color:#ffffff;
+  padding:4px;
+  font-weight:800;
+  font-size:.9em;
+}
+
+.article-seeall a.btn {
+  border:2px solid #fccc4e;
+  border-radius:16px;
+  color:#5a5a5a;
+  padding:4px;
+  font-weight:800;
+  font-size:.9em;
+}
+
+.article-seeall a.btn:hover {
+  border:2px solid #d75608;
+  color:#d75608;
+  background-color:#fff;
+}
+
+.upcoming-link a.btn:hover {
+  border:2px solid #d75608;
+  color:#d75608;
+  background-color:#fff;
+}
+
+.rider-link a.btn:hover {
+  border:2px solid #d75608;
+  color:#d75608;
+  background-color:#fff;
+}
+
+.story-link a.btn:hover {
+  border:2px solid #d75608;
+  color:#d75608;
+  background-color:#fff;
+}
+
+.row.main-card {
+  padding:10px;
+  margin:5px 0;
+  border:2px solid rgb(252,204,78);
+  background-color:#fff;
+}
+
+.col.main-card-poster {
+  background-image:url("../core/img/nissan-altima.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+
+.main-card-caption {
+  margin:auto;
+  width:60%;
+  padding:30px 0;
+}
+
+.card-header {
+  padding:5px 10px;
+  background-color:#fccc4e;
+}
+
+.card-header a:link {
+  text-decoration:none;
+  font-size:.8em;
+  color:#fff;
+}
+
+a:hover {
+  text-decoration:none;
+}
+
+.card-header a > span {
+  font-weight:800;
+}
+
+.happening-card h3 {
+  color:#d75608;
+}
+
+@media (max-width: 768px) {
+  .happening-card h3 {
+    font-size:1.4rem;
+  }
+}
+
+.home-section-3 h2 {
+  color:#cc6d16;
+  font-family:'Ubuntu';
+  font-size:1.8em;
+}
+
+@media (max-width: 572px) {
+  .home-section-3 h2 {
+    font-size:1.6em;
+  }
+}
+
+.home-section-2 h2 {
+  color:#d75608;
+  font-family:'Ubuntu';
+  font-size:1.8em;
+}
+
+@media (max-width: 572px) {
+  .home-section-2 h2 {
+    font-size:1.6em;
+  }
+}
+
+.article-badge {
+  margin:0 3px;
+}
+
+.articles-read-more {
+  display:block;
+}
+
+.home-section-2 {
+  background-color:rgba(49,55,58,0.03);
+}
+
+.hot-ranks {
+  display:inline-block;
+}
+
+.icon.ion-bonfire.hot-ranks.pull-right {
+  color:red;
+}
+
+#high-rank-article {
+  border-left:1px solid rgba(49,55,58,0.04);
+  padding-left:10px;
+}
+
+@media (max-width: 992px) {
+  #high-rank-article {
+    border-left:0px;
+    padding:10px 0 0 0;
+    border-top:1px solid rgba(49,55,58,0.04);
+  }
+}
+
+.article-card p {
+  margin-bottom:0;
+}
+
+.row.articles-card {
+  border:1px solid rgba(51,51,51,0.08);
+  padding:10px 0;
+  border-radius:5px;
+  box-shadow:2px 5px 4px #888;
+}
+
+.article-title {
+  font-weight:800;
+}
+
+#first-upcoming-details-card {
+  border-top:none;
+}
+
+@media (max-width: 990px) {
+  .section03-video-column {
+    padding:1.5em 0 0 0;
+  }
+}
+
+.section03-gallery-thumbnail-title {
+  padding:2px 5px;
+}
+
+.icon.ion-ios-arrow-down.footer-arrow-down {
+  margin-left:.5em;
+  color:#cc6d16;
+}
+
+.typcn.typcn-media-record-outline {
+  color:#cc6d16;
+}
+
+.disp-container {
+  position:relative;
+}
+
+.disp-image {
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.disp-overlay {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  height:100%;
+  width:100%;
+  opacity:0;
+  transition:.5s ease;
+  background-color:rgba(21,152,9,0.26);
+}
+
+.disp-container:hover .disp-overlay {
+  opacity:1;
+}
+
+.disp-text {
+  color:white;
+  font-size:0.8em;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  -ms-transform:translate(-50%, -50%);
+  text-align:center;
+  line-height:1.1em;
+  width:inherit;
+}
+
+.disp-rider {
+  min-height:1.5em;
+  background-color:rgb(44,49,52);
+}
+
+.disp-rider h5 {
+  margin:0;
+  text-align:left;
+  font-size:1em;
+  padding:5px;
+}
+
+@media (max-width: 574px) {
+  .disp-rider h5 {
+    font-size:.8em;
+  }
+}
+
+@media (min-width: 992px) {
+  .media-container {
+    height:165px;
+    overflow:hidden;
+  }
+}
+
+@media (min-width: 1200px) {
+  .media-container {
+    height:195px;
+    overflow:hidden;
+  }
+}
+
+h5 > span {
+  font-weight:bold;
+}
+
+.media-gallery-footer h5 {
+  font-size:1.1em;
+  margin-top:.3em;
+}
+
+@media (max-width: 574px) {
+  .media-gallery-footer h5 {
+    font-size:1em;
+  }
+}
+
+.material-icons {
+  font-size:1em;
+  margin:0 2px;
+}
+
+.section03-video-column {
+}
+
+@media (max-width: 576px) {
+  #recomm-article {
+    display:none;
+  }
+}
+
+@media (max-width: 768px) {
+  .caption-rider {
+    display:none;
+  }
+}
+
+@media (max-width: 990px) {
+  .upcoming-events {
+    margin-top:2em;
+  }
+}
+
+@media (max-width: 766px) {
+  .upcoming-events {
+    margin-top:1em;
+  }
+}
+
+.g-embolden {
+  font-weight:800;
+}
+
+@media (max-width: 574px) {
+  #second-caption-replace {
+    display:block;
+  }
+}
+
+@media (min-width: 574px) {
+  #second-caption-replace {
+    display:none;
+  }
+}
+
+@media (max-width: 574px) {
+  #third-caption {
+    margin-bottom:5px;
+  }
+}
+
+@media (max-width: 764px) {
+  #third-caption {
+    margin-bottom:20px;
+  }
+}
+
+@media (max-width: 1198px) {
+  #third-caption {
+    margin-bottom:14px;
+  }
+}
+
+@media (max-width: 1198px) {
+  .join-us {
+    font-size:3.2em;
+  }
+}
+
+@media (max-width: 990px) {
+  .join-us {
+    font-size:2.6em;
+  }
+}
+
+@media (max-width: 766px) {
+  .join-us {
+    font-size:2.4em;
+  }
+}
+
+@media (max-width: 574px) {
+  .join-us {
+    font-size:2.1em;
+    margin-bottom:0;
+  }
+}
+
+@media (max-width: 574px) {
+  .what-we-do {
+    padding:.3em 0;
+  }
+}
+
+.card-body {
+  padding:.5em;
+  font-size:.8em;
+}
+
+.card-body span {
+  display:block;
+}
+
+@media (min-width:576px) {
+  .jumbotron {
+    padding:1rem 2rem;
+  }
+}
+
+.jumbotron.top {
+  height:200px;
+  background-image:url(../core/img/acfbannerinner.png);
+  text-align:center;
+  margin:0px;
+  border-radius:0px;
+  background-color:transparent;
+  background-size:contain;
+}
+
+ul.inner-menu-list li {
+  float:left;
+}
+
+ul.inner-menu-list li a.active {
+  color:#333;
+  background-color:#fff;
+}
+
+ul.inner-menu-list li a:hover:not(.active) {
+  color:#333333;
+}
+
+.jumbotron h1 {
+  color:#fff;
+  text-transform:uppercase;
+  font-family:'Montserrat', sans-serrif;
+  font-size:2em;
+}
+
+@media (max-width: 766px) {
+  .jumbotron h1 {
+    font-size:1.8em;
+  }
+}
+
+.container.inner-menu-container {
+  text-align:center;
+}
+
+ul.inner-menu-list {
+  list-style-type:none;
+  display:inline-block;
+  overflow:hidden;
+  margin:0;
+  padding:0;
+  background-color:#d75608;
+}
+
+ul.inner-menu-list li a {
+  display:block;
+  color:#fff;
+  text-align:center;
+  padding:14px 16px;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.inner-content-div {
+  padding:10px 5px;
+}
+
+@media (max-width: 766px) {
+  .inner-content-div {
+    padding:5px 2px;
+  }
+}
+
+.inner-content-center {
+  text-align:center;
+  font-size:2em;
+  font-weight:normal;
+  margin:30px;
+}
+
+@media (max-width: 766px) {
+  .inner-content-center {
+    margin:10px;
+    font-size:1.6em;
+  }
+}
+
+.inner-updates-right {
+  min-height:300px;
+  background-color:#d75608;
+  border-radius:5px;
+  padding:10px 5px;
+  color:#fff;
+}
+
+.inner-updates-right h4 {
+  color:#fff;
+  border-bottom-color:#fff;
+}
+
+.inner-menu {
+  background-color:#d75608;
+}
+
+.inner-upcoming-title {
+  line-height:100%;
+  font-weight:700;
+  font-size:.9em;
+  margin:0;
+}
+
+.inner-upcoming-rider {
+  line-height:100%;
+  font-size:.7em;
+  margin:3px 0;
+}
+
+.inner-upcoming-card {
+  margin-top:1em;
+}
+
+.inner-upcoming-card a {
+  color:#fff;
+  font-weight:normal;
+}
+
+@media (max-width: 990px) {
+  .col-3.col-lg-3.col-xl-3.inner-right-panel {
+    display:none;
+  }
+}
+
+.inner-what-is {
+  min-height:200px;
+  border-radius:5px;
+  margin-bottom:5px;
+  /*background-color:rgba(204,204,204,0.28);*/
+  border:1px solid #ccc;
+}
+
+.what-is-bg-holder {
+  height:150px;
+  background-color:#fff;
+  background-image:url(../core/img/img_1.png);
+  background-size:cover;
+  border-radius:5px 5px 0 0;
+}
+
+.what-is-details h5 {
+  color:#000;
+  /*font-weight:800;*/
+  font-size:1.1em;
+  margin:0;
+  font-family:'Ubuntu';
+}
+
+.what-is-details {
+  padding:3px;
+}
+
+.what-is-divider {
+  border-top:5px solid #085994;
+  margin:0 3px;
+}
+
+.what-is-content {
+  padding:0 6px;
+}
+
+.what-is-content p {
+  margin:0;
+}
+
+.what-is-content a {
+  color:#31373a;
+  font-weight:normal;
+  font-size:.9em;
+}
+
+.what-is-content a:hover {
+  color:#cc6d16;
+  font-size:.9em;
+}
+
+.jumbotron.buttom.home {
+  background-color:rgb(255,199,0);
+  border-radius:0;
+  margin:0;
+  padding-bottom:0;
+}
+
+.card {
+  border:1px solid rgb(252,204,78);
+  margin-bottom:4px;
+}
+
+.carousel-caption {
+  position:absolute;
+  right:15%;
+  bottom:50px;
+  left:15%;
+  z-index:10;
+  padding-top:20px;
+  padding-bottom:20px;
+  color:#fff;
+  text-align:left;
+}
+
+@media (max-width: 1198px) {
+  .carousel-caption {
+    bottom:30px;
+  }
+}
+
+@media (max-width: 766px) {
+  .carousel-caption {
+    bottom:10px;
+  }
+}
+
+.notebook {
+  background-image:url(../core/img/notebook.png);
+  background-size:contain;
+  min-height:150px;
+  background-repeat:no-repeat;
+}
+
+.jumbotron.inner-jumbo {
+  height:150px;
+  margin:0px;
+  text-align:center;
+  background-image:url(../core/img/bible-behind-pew.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding:60px 0;
+}
+
+.jumbotron {
+  border-radius:0;
+}
+
+
+.jumbotron.buttom.home h1 {
+  /*text-shadow:2px 2px 4px #000000;*/
+  font-family:'Ubuntu';
+  font-weight:800;
+}
+
+.story-card {
+  font-size:1em;
+  color:#fff;
+  padding:2px;
+}
+
+.story-link {
+  text-align:center;
+}
+
+.jumbosection {
+  background-image:url(../core/img/bible-behind-pew.png);
+  padding:0px;
+}
+
+.one {
+  height:10px;
+}
+
+.jumbotron.inside-buttom {
+  background-image:url(../core/img/bg.png);
+  background-repeat:repeat-x;
+  background-position:center bottom;
+  padding:0;
+  margin:0;
+  height:50px;
+  background-color:transparent;
+  border-radius:0;
+}
+
+.col-sm-12.col-md-12.col-lg-4.col-xl-4.upcoming-events {
+  background-color:rgba(49,55,58,0.03);
+  border:1px solid #ffffff;
+  border-radius:5px;
+  box-shadow:2px 5px 4px #888;
+}
+
+

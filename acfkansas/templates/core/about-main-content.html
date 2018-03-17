@@ -1,0 +1,84 @@
+{% load staticfiles %}
+
+ 
+ <div class="jumbotron inner-jumbo">
+        <h1 class="inner-jumbo-title"><i class="icon ion-arrow-left-b"></i>
+
+		{% ifequal about_type 'mission' %}&nbsp;Mission Statement&nbsp;{% endifequal %}
+		{% ifequal about_type 'history' %}&nbsp;History&nbsp;{% endifequal %} 
+		{% ifequal about_type 'leadership' %}&nbsp;Leadership&nbsp;{% endifequal %} 
+		{% ifequal about_type 'member' %}&nbsp;Who can be a Member&nbsp;{% endifequal %}
+
+
+	<i class="fa fa-caret-right"></i></h1>
+    </div>
+    <section class="jumbosection"></section>
+    <div class="inner-menu">
+        <div class="container inner-menu-container">
+            <ul class="inner-menu-list">
+            {% ifequal about_type 'mission' %}
+                <li><a href="{% url 'about' 'mission' %}" class="active">Mission Statement</a></li>
+            {% else %}
+            	<li><a href="{% url 'about' 'mission' %}">Mission Statement</a></li>
+            {% endifequal %}
+            {% ifequal about_type 'history' %}
+                <li><a href="{% url 'about' 'history' %}" class="active" >History</a></li>
+                {% else %}
+                <li><a href="{% url 'about' 'history' %}">History</a></li>
+                {% endifequal %}
+                {% ifequal about_type 'leadership' %}
+                <li><a href="{% url 'about' 'leadership' %}" class="active" >Leadership</a></li>
+                {% else %}
+                <li><a href="{% url 'about' 'leadership' %}">Leadership</a></li>
+                {% endifequal %}
+                
+                {% ifequal about_type 'member' %}
+                <li><a href="{% url 'about' 'member' %}" class="active" >Who can be a Member</a></li>
+                {% else %}
+                <li><a href="{% url 'about' 'member' %}">Who can be a Member</a></li>
+                {% endifequal %}
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 inner-main-panel">
+                    <div class="inner-content-div">
+                    {% ifequal about_type 'mission' %}
+                        <p class="inner-content-center">
+                        <strong>" ACF shall be a thriving Christian Community that models integrity, excellence, 
+                        and compassion to mobilize and empower Africans worldwide to impact their generation and Africa "</strong>
+                        </p>
+                    {% endifequal %} 
+                    
+                    {% ifequal about_type 'history' %}
+                        {% include "core/about-history-extra.html" %}
+                    {% endifequal %}  
+                     
+                     {% ifequal about_type 'leadership' %}
+                        <p class="inner-content-center">
+                        <strong>- add content - </strong>
+                        </p>
+                    {% endifequal %} 
+                     
+                     {% ifequal about_type 'member' %}
+                        <p class="inner-content-center">
+                        <strong> Membership is open to all African Christians. <br /> Also, open to all Christians who have been called to minister to Africa and Africans. </strong>
+                        </p>
+                    {% endifequal %} 
+                     
+                     
+                    </div>
+                </div>
+                
+                
+             <!-- Insert your right panel Here --> 
+              {% include "core/inner-right-panel.html" %}
+              
+            </div>
+        </div>
+    </section>
+    <div class="jumbotron inside-buttom">
+        <p></p>
+    </div>

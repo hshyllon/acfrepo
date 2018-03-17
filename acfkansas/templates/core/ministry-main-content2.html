@@ -1,0 +1,194 @@
+{% load staticfiles %}
+
+    
+    
+    {% ifequal ministry_type 'children' %}
+    <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> CHILDREN MINISTRY <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'ministry' 'children' %}"  class="active">Children</a></li>
+                    <li><a href="{% url 'ministry' 'youth' %}">Youth </a></li>
+                    <li><a href="{% url 'ministry' 'missions' %}">Missions</a></li>
+                    <li><a href="{% url 'ministry' 'worship' %}">Worship &amp; Fellowship </a></li>
+                    <li><a href="{% url 'ministry' 'membership' %}">Membership </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content">
+                    
+                    As a fellowship, we invest heavily in the development of our children, youth and young adults. Our goal is to explore practical and concrete ways to organize and energize our youth and young adults and provide them with leadership tools needed to become future leaders.
+
+<br><br>
+
+ <h4>Mission Statement</h4>
+To uphold the existing ACF legacy: we intend to live and commit to establishing an undying zeal that results in a spiritual youth network by implementing a true sense of cultural unity and spiritual pride.
+
+<br><br>
+<h4>Goals</h4>
+<ul>
+<li>Increase the participation of all African youth</li>
+<li>Address issues pertaining to ACF youth</li>
+<li>Cultivate a higher sense of African pride</li>
+<li>Establish a feeling of belonging throughout the ACF community</li>
+<li>Develop the leadership abilities of ACF youth</li>
+<li>Strengthen the relationship between the ACF youth members</li>
+
+</ul>           
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
+    
+        {% ifequal ministry_type 'youth' %}
+    <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> YOUTH MINISTRY <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'ministry' 'children' %}"  >Children</a></li>
+                    <li><a href="{% url 'ministry' 'youth' %}" class="active">Youth </a></li>
+                    <li><a href="{% url 'ministry' 'missions' %}">Missions</a></li>
+                    <li><a href="{% url 'ministry' 'worship' %}">Worship &amp; Fellowship </a></li>
+                    <li><a href="{% url 'ministry' 'membership' %}">Membership </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content"> 
+                    
+                    <h4>Vision</h4>
+
+The Young Adult (YA) Ministry operates under the African Christian fellowship and was established to develop Young Adults mainly of African descents into the next generation of Leaders by catering to their needs and building relationships.
+<ul>
+<li>Building People</li>
+<li>Building Leaders</li>
+<li>Building Relationships</li>
+
+</ul>
+
+
+
+
+<br>
+<h4>Goals for the Midwest Young Adult Ministry</h4>
+<ul>
+<li>Establish solid/vibrant young adult group in every chapter/state in the Midwest</li>
+<li>Establish a strong connection to youth and young adults in Africa (Networking with Young Adults in Africa)</li>
+<li>Building and developing leadership among African Young Adult in the Midwest</li>
+
+</ul>
+  
+                    
+                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
+    
+    
+        {% ifequal ministry_type 'missions' %}
+    <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> MISSIONS MINISTRY <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'ministry' 'children' %}"  >Children</a></li>
+                    <li><a href="{% url 'ministry' 'youth' %}" >Youth </a></li>
+                    <li><a href="{% url 'ministry' 'missions' %}" class="active">Missions</a></li>
+                    <li><a href="{% url 'ministry' 'worship' %}">Worship &amp; Fellowship </a></li>
+                    <li><a href="{% url 'ministry' 'membership' %}">Membership </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content"> - PROVIDE INFORMATION - </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
+    
+    
+       {% ifequal ministry_type 'worship' %}
+    <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> WORSHIP &amp; FELLOWSHIP MINISTRY <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'ministry' 'children' %}"  >Children</a></li>
+                    <li><a href="{% url 'ministry' 'youth' %}" >Youth </a></li>
+                    <li><a href="{% url 'ministry' 'missions' %}" >Missions</a></li>
+                    <li><a href="{% url 'ministry' 'worship' %}" class="active">Worship &amp; Fellowship </a></li>
+                    <li><a href="{% url 'ministry' 'membership' %}">Membership </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content"> - PROVIDE INFORMATION - </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
+    
+    
+    
+       {% ifequal ministry_type 'membership' %}
+    <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> MEMBERSHIP MINISTRY <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'ministry' 'children' %}"  >Children</a></li>
+                    <li><a href="{% url 'ministry' 'youth' %}" >Youth </a></li>
+                    <li><a href="{% url 'ministry' 'missions' %}" >Missions</a></li>
+                    <li><a href="{% url 'ministry' 'worship' %}" >Worship &amp; Fellowship </a></li>
+                    <li><a href="{% url 'ministry' 'membership' %} class="active"">Membership </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content"> - PROVIDE INFORMATION - </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
+    

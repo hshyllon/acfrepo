@@ -1,0 +1,94 @@
+{% load staticfiles %}
+
+    <div class="jumbotron inner-jumbo">
+        <h1 class="inner-jumbo-title"><i class="fa fa-caret-left">
+        </i>
+
+		{% ifequal resources_type 'devotion' %}&nbsp;Weekly Devotion&nbsp;{% endifequal %}
+		{% ifequal resources_type 'media' %}&nbsp;Media&nbsp;{% endifequal %} 
+		{% ifequal resources_type 'downloads' %}&nbsp;Downloads&nbsp;{% endifequal %} 
+
+		<i class="fa fa-caret-right"></i></h1>
+    </div>
+    <div class="inner-menu">
+        <div class="container inner-menu-container">
+            <ul class="inner-menu-list">
+
+            {% ifequal resources_type 'devotion' %}
+                <li><a href="{% url 'resources' 'devotion' %}" class="active">Devotion</a></li>
+            {% else %}
+            	<li><a href="{% url 'resources' 'devotion' %}">Devotion</a></li>
+            {% endifequal %}
+            
+            {% ifequal resources_type 'media' %}
+                <li><a href="{% url 'resources' 'media' %}" class="active">Media</a></li>
+            {% else %}
+            	<li><a href="{% url 'resources' 'media' %}">Media</a></li>
+            {% endifequal %}
+            
+            {% ifequal resources_type 'downloads' %}
+                <li><a href="{% url 'resources' 'downloads' %}" class="active">Downloads</a></li>
+            {% else %}
+            	<li><a href="{% url 'resources' 'downloads' %}">Downloads</a></li>
+            {% endifequal %}
+			</ul>
+        </div>
+    </div>
+    {% ifequal resources_type 'media' %}
+    
+    <div class="photo-gallery">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">ACF Media Gallery</h2>
+                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+            </div>
+            <div class="row photos">
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/desk.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/desk.jpg'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/building.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/building.jpg'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/loft.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/loft.jpg'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/building.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/building.jpg'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/loft.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/loft.jpg'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/desk.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/desk.jpg'  %}"></a></div>
+            </div>
+        </div>
+    </div>
+    <section></section>
+    <div class="jumbotron inside-buttom">
+        <p></p>
+    </div>
+    
+    {% endifequal %}
+    <!--  Show this area if link is not Media -->
+    {% ifnotequal resources_type 'media' %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 inner-main-panel">
+                    <div class="inner-content-div">
+             
+                     {% ifequal resources_type 'downloads' %}
+                        <p class="inner-content-center">
+                        <strong> -add item- </strong>
+                        </p>
+                    {% endifequal %} 
+                     
+                     {% ifequal resources_type 'devotion' %}
+                        <p class="inner-content-center">
+                        <strong> -add item- </strong>
+                        </p>
+                    {% endifequal %} 
+                     
+                    </div>
+                </div>
+                
+                
+             <!-- Insert your right panel Here --> 
+              {% include "core/inner-right-panel.html" %}
+              
+            </div>
+        </div>
+    </section>
+    <div class="jumbotron inside-buttom">
+        <p></p>
+    </div>
+     {% endifnotequal %}

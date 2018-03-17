@@ -1,0 +1,98 @@
+{% load staticfiles %}
+
+ 
+ <div class="jumbotron inner-jumbo">
+        <h1 class="inner-jumbo-title"><i class="icon ion-arrow-left-b"></i>
+
+		{% ifequal ministry_type 'children' %}&nbsp;Children&nbsp;{% endifequal %}
+		{% ifequal ministry_type 'youth' %}&nbsp;Youth&nbsp;{% endifequal %} 
+		{% ifequal ministry_type 'missions' %}&nbsp;Missions&nbsp;{% endifequal %} 
+		{% ifequal ministry_type 'worship' %}&nbsp;Worship &amp; Fellowship&nbsp;{% endifequal %}
+		{% ifequal ministry_type 'membership' %}&nbsp;Membership&nbsp;{% endifequal %}
+
+
+	<i class="fa fa-caret-right"></i></h1>
+    </div>
+    <section class="jumbosection"></section>
+    <div class="inner-menu">
+        <div class="container inner-menu-container">
+            <ul class="inner-menu-list">
+            {% ifequal ministry_type 'children' %}
+                <li><a href="{% url 'ministry' 'children' %}" class="active">Children</a></li>
+            {% else %}
+            	<li><a href="{% url 'ministry' 'children' %}">Children</a></li>
+            {% endifequal %}
+            {% ifequal ministry_type 'youth' %}
+                <li><a href="{% url 'ministry' 'youth' %}" class="active" >Youth</a></li>
+                {% else %}
+                <li><a href="{% url 'ministry' 'youth' %}">Youth</a></li>
+                {% endifequal %}
+                {% ifequal ministry_type 'missions' %}
+                <li><a href="{% url 'ministry' 'missions' %}" class="active" >Missions</a></li>
+                {% else %}
+                <li><a href="{% url 'ministry' 'missions' %}">Missions</a></li>
+                {% endifequal %}
+                
+                {% ifequal ministry_type 'worship' %}
+                <li><a href="{% url 'ministry' 'worship' %}" class="active" >Worship &amp; Fellowship</a></li>
+                {% else %}
+                <li><a href="{% url 'ministry' 'worship' %}">Worship &amp; Fellowship</a></li>
+                {% endifequal %}
+                
+                {% ifequal ministry_type 'membership' %}
+                <li><a href="{% url 'ministry' 'membership' %}" class="active" >Membership</a></li>
+                {% else %}
+                <li><a href="{% url 'ministry' 'membership' %}">Membership</a></li>
+                {% endifequal %}
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 inner-main-panel">
+                    <div class="inner-content-div">
+                    {% ifequal ministry_type 'children' %}
+                        <p class="inner-content-center">
+                        <strong>- add content - </strong>
+                        </p>
+                    {% endifequal %} 
+                    
+                    {% ifequal ministry_type 'youth' %}
+                        <p class="inner-content-center">
+                        <strong>- add content - </strong>
+                        </p>
+                    {% endifequal %}  
+                     
+                     {% ifequal ministry_type 'missions' %}
+                        <p class="inner-content-center">
+                        <strong>- add content - </strong>
+                        </p>
+                    {% endifequal %} 
+                     
+                     {% ifequal ministry_type 'worship' %}
+                        <p class="inner-content-center">
+                        <strong>- add content - </strong>
+                        </p>
+                    {% endifequal %} 
+                    
+                    {% ifequal ministry_type 'membership' %}
+                        <p class="inner-content-center">
+                        <strong>- add content - </strong>
+                        </p>
+                    {% endifequal %} 
+            
+                     
+                    </div>
+                </div>
+                
+               <!-- Insert your right panel Here --> 
+              {% include "core/inner-right-panel.html" %}
+              
+              
+            </div>
+        </div>
+    </section>
+    <div class="jumbotron inside-buttom">
+        <p></p>
+    </div>

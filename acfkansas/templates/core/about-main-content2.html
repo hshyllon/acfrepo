@@ -1,0 +1,131 @@
+{% load staticfiles %}
+
+ 
+    
+    {% ifequal about_type 'mission' %}
+    <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> OUR MISSION STATEMENT <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'about' 'mission' %}"  class="active">Mission Statement</a></li>
+                    <li><a href="{% url 'about' 'history' %}">History </a></li>
+                    <li><a href="{% url 'about' 'value' %}">Value Statement</a></li>
+                    <li><a href="{% url 'about' 'who' %}">Who can be a Member?</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content"> " ACF shall be a thriving Christian Community that models integrity, excellence, and compassion to mobilize and empower Africans worldwide to impact their generation and Africa "</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
+    
+    
+    {% ifequal about_type 'history' %}
+       <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> OUR HISTORY <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'about' 'mission' %}" >Mission Statement</a></li>
+                    <li><a href="{% url 'about' 'history' %}"  class="active">History </a></li>
+                    <li><a href="{% url 'about' 'value' %}">Value Statement</a></li>
+                    <li><a href="{% url 'about' 'who' %}">Who can be a Member?</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content"> 
+                    
+                    Founded in 1977 as an outreach ministry to African Students, ACF-USA has since grown to over fifty (50) chapters located in several cities across the United States of America.
+In 1983, the Midwest Region comprised of Minnesota, Minnesota, Ohio, Iowa, Michigan, Illinois, Wisconsin, Indiana, N. Dakota, S. Dakota, Nebraska, and Kansas was established, with the addition of the Columbus chapter in 1989. 
+<br> The region held its first conference that year during the Easter weekend at Mishawka, Indiana.
+Subsequent conferences have been Wisconsin '84 (Twin Cities Chapter), Chicago '85, Wisconsin '86, Michigan '87, Michigan '88, Chicago '89, Ohio '90, Wisconsin '91 (Twin Cities Chapter), and more.
+                    
+                    
+                     </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
+    
+        
+    {% ifequal about_type 'value' %}
+       <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> OUR VALUE STATEMENT <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'about' 'mission' %}" >Mission Statement</a></li>
+                    <li><a href="{% url 'about' 'history' %}">History </a></li>
+                    <li><a href="{% url 'about' 'value' %}"  class="active">Value Statement</a></li>
+                    <li><a href="{% url 'about' 'who' %}">Who can be a Member?</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content">
+                    
+                    We believe in:
+                    
+                    <ul>
+    <li>God the creator of all things</li>
+    <li>Jesus Christ as God manifested in the flesh</li>
+    <li>The Holy Spirit, whose purpose is to empower us and lead us into righteousness</li>
+    <li>The Holy Bible as the Word of God</li>
+    <li>Love, Sharing, and Fellowship of all Christians </li>
+</ul>
+
+
+                    
+                    
+                    </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
+    
+    {% ifequal about_type 'who' %}
+       <div class="jumbotron">
+        <h1><i class="icon ion-android-arrow-dropleft"></i> WHO CAN BE A MEMBER? <i class="icon ion-android-arrow-dropright"></i></h1>
+    </div>
+    <section class="inner-section-01">
+        <div class="inner-menu">
+            <div class="container inner-menu-container">
+                <ul class="inner-menu">
+                    <li><a href="{% url 'about' 'mission' %}" >Mission Statement</a></li>
+                    <li><a href="{% url 'about' 'history' %}">History </a></li>
+                    <li><a href="{% url 'about' 'value' %}">Value Statement</a></li>
+                    <li><a href="{% url 'about' 'who' %}" class="active">Who can be a Member?</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-content">
+                    <p class="inner-section-content">
+                    
+                    Membership is open to all African Christians, as well as to all Christians who have been called to minister to Africa and Africans.
+                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endifequal %}
