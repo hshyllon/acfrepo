@@ -26,7 +26,7 @@ SECRET_KEY = 'b7)z9oh1zm0foujk_0q3dh$#5u3@xte=)4caacuuv-1qv7b)$9'
 #DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['159.65.235.168','127.0.0.1']
 
 
 # Application definition
@@ -78,11 +78,11 @@ DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.postgresql',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'acfkansasdbase',
-        'USER': 'postgres',
-        'PASSWORD': 'password',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': 'acfkc_prod',
+        'USER': 'u_acfkc',
+        'PASSWORD': '@cfkc@',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 # Password validation
@@ -140,8 +140,4 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 
 # Email setting
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'gshyllon@gmail.com'
-EMAIL_HOST_PASSWORD = '*david*SHY'
-EMAIL_PORT = 587
+
