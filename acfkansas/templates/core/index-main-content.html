@@ -38,7 +38,7 @@
                         <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 what-we-do">
                             <div class="disp-container"><img src="{% static 'core/img/we-praise.png'  %}" class="disp-image">
                                 <div class="disp-overlay">
-                                    <div class="disp-text"><span>We Praise, Pray &amp; Worship God!<br></span></div>
+                                    <div class="disp-text"><a href="{% url 'whatwedo' %}"><span>We Praise, Pray &amp; Worship God!<br></span></a></div>
                                 </div>
                             </div>
                             <div>
@@ -50,7 +50,7 @@
                         <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 what-we-do">
                             <div class="disp-container"><img src="{% static 'core/img/we_gather_ed.png'  %}" class="disp-image">
                                 <div class="disp-overlay">
-                                    <div class="disp-text"><span>We gather to have fun, good African food and fellowship together!<br></span></div>
+                                    <div class="disp-text"><a href="{% url 'whatwedo' %}"><span>We gather to have fun, good African food and fellowship together!<br></span></a></div>
                                 </div>
                             </div>
                             <div>
@@ -62,7 +62,7 @@
                         <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 what-we-do">
                             <div class="disp-container"><img src="{% static 'core/img/we_missions.png' %} " class="disp-image">
                                 <div class="disp-overlay">
-                                    <div class="disp-text"><span>We engage in Mission work and other services to our community!</span></div>
+                                     <div class="disp-text"><a href="{% url 'whatwedo' %}"><span>We engage in Mission work and other services to our community!</span></a></div>
                                 </div>
                             </div>
                             <div>
@@ -81,45 +81,49 @@
                         </div>
                         <div class="col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9">
                             <div role="tablist" id="accordion-1">
-                                <div class="card">
+                                <div class="card acc-card">
                                     <div class="card-header" role="tab">
-                                        <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="true" aria-controls="accordion-1 .item-1" href="div#accordion-1 .item-1"><i class="material-icons">hearing</i>&nbsp;ACF Monthly Gatherings | <span>2018</span></a></h5>
+                                        <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="true" aria-controls="accordion-1 .item-1" href="div#accordion-1 .item-1">
+                                        <i class="material-icons">hearing</i>&nbsp;ACF Monthly Gatherings</a></h5>
                                     </div>
                                     <div class="collapse show item-1" role="tabpanel" data-parent="#accordion-1">
                                         <div class="card-body">
-                                            <p class="card-text">We gather on the second Saturday of every month at Vineyard Community Church, Overland Park, KS. It is a time of fellowship with the Lord. Join us as we enjoy a variety of African food.<span><a href="#">Details&nbsp;<i class="fa fa-caret-right"></i></a></span></p>
+                                            <p class="card-text">We gather on the second Saturday of every month at Vineyard Community Church, Overland Park, KS. 
+                                            It is a time of fellowship with the Lord. Join us as we enjoy a variety of African food.
+                                            <span><a href="{% url 'happeningdetail' 'whatishappening' %}">Details&nbsp;<i class="fa fa-caret-right"></i></a></span></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card acc-card">
                                     <div class="card-header" role="tab">
-                                        <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-2" href="div#accordion-1 .item-2"><i class="material-icons">hearing</i>&nbsp;ACF Youth Convention | <span>2018</span></a></h5>
+                                        <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-2" href="div#accordion-1 .item-2">
+                                        <i class="material-icons">hearing</i>&nbsp;ACF Youth Convention | <span>2018</span></a></h5>
                                     </div>
                                     <div class="collapse item-2" role="tabpanel" data-parent="#accordion-1">
                                         <div class="card-body">
                                             <p class="card-text">Exciting activities are lined up for this year's ACF Youth convention. Come join other youths from different parts of the country to in this wondrous time of fun and fellowship. It will be held at Los Angeles,
-                                                CA.<span><a href="#">Details&nbsp;<i class="fa fa-caret-right"></i></a></span></p>
+                                                CA.<span><a href="{% url 'happeningdetail' 'whatishappening' %}">Details&nbsp;<i class="fa fa-caret-right"></i></a></span></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card acc-card">
                                     <div class="card-header" role="tab">
                                         <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-3" href="div#accordion-1 .item-3"><i class="material-icons">hearing</i>&nbsp;ACF Missions to Malawi | <span>2018</span></a></h5>
                                     </div>
                                     <div class="collapse item-3" role="tabpanel" data-parent="#accordion-1">
                                         <div class="card-body">
                                             <p class="card-text">Mark 16:15(NIV) says "Go into all the world and preach the gospel to all creation". We will return to Malawi this year to share the light of the Gospel. Also, we will administer and provide health supplies to
-                                                Malawians. Be a part of this work as we fulfill God's desire for mankind.&nbsp;<br><span><a href="#">Details&nbsp;<i class="fa fa-caret-right"></i></a></span></p>
+                                                Malawians. Be a part of this work as we fulfill God's desire for mankind.&nbsp;<br><span><a href="{% url 'happeningdetail' 'whatishappening' %}">Details&nbsp;<i class="fa fa-caret-right"></i></a></span></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card acc-card">
                                     <div class="card-header" role="tab">
                                         <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-4" href="div#accordion-1 .item-4"><i class="material-icons">hearing</i>&nbsp;ACF Kansas City Building Project</a></h5>
                                     </div>
                                     <div class="collapse item-4" role="tabpanel" data-parent="#accordion-1">
                                         <div class="card-body">
-                                            <p class="card-text">Join hands with us on our Chapter building funding..<br><span><a href="#">Details&nbsp;<i class="fa fa-caret-right"></i></a></span></p>
+                                            <p class="card-text">Join hands with us on our Chapter building funding..<br><span><a href="{% url 'building' %}">Details&nbsp;<i class="fa fa-caret-right"></i></a></span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -133,7 +137,7 @@
                         <div class="upcoming-date"><span class="upcoming-day">28</span><span>MAY</span></div>
                         <div id="first-upcoming-details-card" class="upcoming-details-card">
                             <div class="inside-he">
-                                <h5>2018 ACF National Conference</h5>
+                                <h5>ACF MidWest Regional Conference</h5>
                                 <div class="table-responsive">
                                     <table class="table upcoming-table">
                                         <tbody>
@@ -148,7 +152,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <p class="rider-link"><a href="#" class="btn">See Details</a></p>
+                                <p class="rider-link"><a href="{% url 'happeningdetail' 'upcoming' %}" class="btn">See Details</a></p>
                             </div>
                         </div>
                     </div>
@@ -156,7 +160,7 @@
                         <div class="upcoming-date"><span class="upcoming-day">19</span><span>AUG</span></div>
                         <div class="upcoming-details-card">
                             <div class="inside-he">
-                                <h5>2018 ACF Youth Convention</h5>
+                                <h5>ACF National Youth Convention</h5>
                                 <div class="table-responsive">
                                     <table class="table upcoming-table">
                                         <tbody>
@@ -171,7 +175,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <p class="rider-link"><a href="#" class="btn">See Details</a></p>
+                                <p class="rider-link"><a href="{% url 'happeningdetail' 'upcoming' %}" class="btn">See Details</a></p>
                             </div>
                         </div>
                     </div>
@@ -194,7 +198,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <p class="rider-link"><a href="#" class="btn">See Details</a></p>
+                                <p class="rider-link"><a href="{% url 'happeningdetail' 'upcoming' %}" class="btn">See Details</a></p>
                             </div>
                         </div>
                     </div>
@@ -242,24 +246,24 @@
                         <div class="col-6">
                             <div class="disp-container media-container"><img src="{% static 'core/img/newyear-party.png'  %}" class="disp-image">
                                 <div class="disp-overlay">
-                                    <div class="disp-text"><span><br>Album of New Year Party, 2018. Held at Evangel Church, Kansas City Kansas.<br><br></span></div>
+                                    <div class="disp-text"><a href="{% url 'resources' 'media' %}"><span>Album of New Year Party, 2018. Held at Evangel Church, Kansas City Kansas.</span></a></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="media-gallery-footer">
-                                    <h5 class="media-album-title"><span>New Year Party&nbsp;</span>&nbsp;| 2018</h5>
+                                    <h5 class="media-album-title"><span><a href="{% url 'resources' 'media' %}">New Year Party | 2018 </a></span> </h5> 
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="disp-container media-container"><img src="{% static 'core/img/malawi.png'  %}" class="disp-image">
                                 <div class="disp-overlay">
-                                    <div class="disp-text"><span><br>Album of events at the 2017 ACF Missions to Malawi, Africa.<br><br></span></div>
+                                    <div class="disp-text"><a href="{% url 'resources' 'media' %}"><span>Album of events at the 2017 ACF Missions to Malawi, Africa.</span></a></div>
                                 </div>
                             </div>
                             <div>
                                 <div class="media-gallery-footer">
-                                    <h5><span>Malawi Missions</span>&nbsp;| 2017</h5>
+                                    <h5><span><a href="{% url 'resources' 'media' %}">Malawi Missions | 2017</a></span> </h5>
                                 </div>
                             </div>
                         </div>
@@ -269,7 +273,7 @@
                     <div class="video-container"><iframe allowfullscreen="" frameborder="0" src="https://player.vimeo.com/video/201361986"></iframe></div>
                 </div>
                 <div class="col-12">
-                    <p class="article-seeall"><a href="#" class="btn">See all media</a></p>
+                    <p class="article-seeall"><a href="{% url 'resources' 'media' %}" class="btn">See all media</a></p>
                 </div>
             </div>
         </div>

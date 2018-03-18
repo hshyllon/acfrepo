@@ -1,8 +1,7 @@
 {% load staticfiles %}
 
     <div class="jumbotron inner-jumbo">
-        <h1 class="inner-jumbo-title"><i class="fa fa-caret-left">
-        </i>
+        <h1 class="inner-jumbo-title"><i class="fa fa-caret-left"></i>
 
 		{% ifequal resources_type 'devotion' %}&nbsp;Weekly Devotion&nbsp;{% endifequal %}
 		{% ifequal resources_type 'media' %}&nbsp;Media&nbsp;{% endifequal %} 
@@ -40,15 +39,20 @@
         <div class="container">
             <div class="intro">
                 <h2 class="text-center">ACF Media Gallery</h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+                <p class="text-center">Enjoy our media gallery! Explore videos and image albums of our past events. </p>
             </div>
             <div class="row photos">
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/desk.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/desk.jpg'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/building.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/building.jpg'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/loft.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/loft.jpg'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/building.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/building.jpg'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/loft.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/loft.jpg'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/desk.jpg'  %}" data-lightbox="photos"><img class="img-fluid" src="{% static 'core/img/desk.jpg'  %}"></a></div>
+            	<div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/newyear-party.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/newyear-party.png'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/malawi.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/malawi.png'  %}"></a></div>
+                
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-01.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-01.png'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-02.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-02.png'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-03.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-03.png'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-04.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-04.png'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-05.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-05.png'  %}"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-06.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-06.png'  %}"></a></div>
+            	<div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-07.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-07.png'  %}"></a></div>
+            
             </div>
         </div>
     </div>
@@ -67,15 +71,13 @@
                     <div class="inner-content-div">
              
                      {% ifequal resources_type 'downloads' %}
-                        <p class="inner-content-center">
-                        <strong> -add item- </strong>
-                        </p>
+                        <!-- Insert your downloads docs Here --> 
+              			{% include "core/resources-downloads-content.html" %}
                     {% endifequal %} 
                      
                      {% ifequal resources_type 'devotion' %}
-                        <p class="inner-content-center">
-                        <strong> -add item- </strong>
-                        </p>
+                        <!-- Insert your devotion Here --> 
+              			{% include "core/resources-devotions-content.html" %}
                     {% endifequal %} 
                      
                     </div>

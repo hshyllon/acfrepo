@@ -47,3 +47,35 @@ def resources(request, resources_type):
         }
     
     return render(request, 'core/resources.html', context)
+
+def whatwedo(request):
+    
+    context = {
+
+        }
+    
+    return render(request, 'core/whatwedo.html', context)
+
+def building(request):
+    
+    context = {
+
+        }
+    
+    return render(request, 'core/building.html', context)
+
+def happening(request, happening_type):
+    
+    context = {
+        'happening_type':happening_type,
+        }
+    
+    return render(request, 'core/happening.html', context)
+
+def happeningdetail(request,happeningdetail_type):
+    
+    context = {
+        'happeningdetail_type':happeningdetail_type,
+        }
+    
+    return render(request, 'core/happeningdetail.html', context)

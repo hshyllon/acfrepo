@@ -2,11 +2,11 @@
 
  
  <div class="jumbotron inner-jumbo">
-        <h1 class="inner-jumbo-title"><i class="icon ion-arrow-left-b"></i>
+        <h1 class="inner-jumbo-title"><i class="fa fa-caret-left"></i>
 
 		{% ifequal about_type 'mission' %}&nbsp;Mission Statement&nbsp;{% endifequal %}
-		{% ifequal about_type 'history' %}&nbsp;History&nbsp;{% endifequal %} 
-		{% ifequal about_type 'leadership' %}&nbsp;Leadership&nbsp;{% endifequal %} 
+		{% ifequal about_type 'history' %}&nbsp;Our History&nbsp;{% endifequal %} 
+		{% ifequal about_type 'leadership' %}&nbsp;Our Leadership&nbsp;{% endifequal %} 
 		{% ifequal about_type 'member' %}&nbsp;Who can be a Member&nbsp;{% endifequal %}
 
 
@@ -22,14 +22,14 @@
             	<li><a href="{% url 'about' 'mission' %}">Mission Statement</a></li>
             {% endifequal %}
             {% ifequal about_type 'history' %}
-                <li><a href="{% url 'about' 'history' %}" class="active" >History</a></li>
+                <li><a href="{% url 'about' 'history' %}" class="active" >Our History</a></li>
                 {% else %}
-                <li><a href="{% url 'about' 'history' %}">History</a></li>
+                <li><a href="{% url 'about' 'history' %}">Our History</a></li>
                 {% endifequal %}
                 {% ifequal about_type 'leadership' %}
-                <li><a href="{% url 'about' 'leadership' %}" class="active" >Leadership</a></li>
+                <li><a href="{% url 'about' 'leadership' %}" class="active" >Our Leadership</a></li>
                 {% else %}
-                <li><a href="{% url 'about' 'leadership' %}">Leadership</a></li>
+                <li><a href="{% url 'about' 'leadership' %}">Our Leadership</a></li>
                 {% endifequal %}
                 
                 {% ifequal about_type 'member' %}
@@ -46,26 +46,36 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 inner-main-panel">
                     <div class="inner-content-div">
                     {% ifequal about_type 'mission' %}
+                    <div class="card site-calendar-card">
+                        <div class="card-body">
                         <p class="inner-content-center">
                         <strong>" ACF shall be a thriving Christian Community that models integrity, excellence, 
                         and compassion to mobilize and empower Africans worldwide to impact their generation and Africa "</strong>
                         </p>
+                        </div>
+                        </div>
+                    
+                        
                     {% endifequal %} 
                     
                     {% ifequal about_type 'history' %}
-                        {% include "core/about-history-extra.html" %}
+                    <!-- Insert history content Here --> 
+                        {% include "core/about-history-content.html" %}
                     {% endifequal %}  
                      
                      {% ifequal about_type 'leadership' %}
-                        <p class="inner-content-center">
-                        <strong>- add content - </strong>
-                        </p>
+                        <!-- Insert leadership content Here --> 
+             			 {% include "core/about-leadership-content.html" %}
                     {% endifequal %} 
                      
                      {% ifequal about_type 'member' %}
+                      <div class="card site-calendar-card">
+                        <div class="card-body">
                         <p class="inner-content-center">
                         <strong> Membership is open to all African Christians. <br /> Also, open to all Christians who have been called to minister to Africa and Africans. </strong>
                         </p>
+                        </div>
+                        </div>
                     {% endifequal %} 
                      
                      

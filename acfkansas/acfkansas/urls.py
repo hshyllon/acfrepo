@@ -25,7 +25,12 @@ urlpatterns = [
     url(r'^(?P<ministry_type>[\w]+)/ministry$', views.ministry , name='ministry'),   
     url(r'^contact/$', views.contact , name='contact'), 
     url(r'^(?P<resources_type>[\w]+)/resources$', views.resources , name='resources'), 
+    url(r'^whatwedo/$', views.whatwedo , name='whatwedo'),
+    url(r'^building/$', views.building , name='building'),
+    url(r'^(?P<happening_type>[\w]+)/happening$', views.happening , name='happening'),
+    url(r'^(?P<happeningdetail_type>[\w]+)/happeningdetail$', views.happeningdetail , name='happeningdetail'),
 
+    
 ]
 
 if settings.DEBUG:

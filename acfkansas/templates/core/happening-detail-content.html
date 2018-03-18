@@ -1,0 +1,61 @@
+{% load staticfiles %}
+     
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 inner-main-panel">
+                    <div class="card site-calendar-card">
+                        <div class="card-body">
+                        {% ifequal happeningdetail_type 'upcoming' %}
+                            <h4 class="card-title">Upcoming Event Title Here...</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
+                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
+                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
+                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
+                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
+                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.&nbsp;<br>Nullam id dolor id nibh ultricies vehicula ut id
+                                elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
+                                egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor
+                                id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo
+                                odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                                <p>
+                                
+                                <a href="{% url 'happening' 'upcoming' %}">Back to Upcoming Events&nbsp;<i class="fa fa-angle-double-right"></i></a> 
+                                </p>
+                                
+                                </p>
+                         {% endifequal %} 
+                         
+                         
+                         {% ifequal happeningdetail_type 'whatishappening' %}
+                         <h4 class="card-title">What is happening Title Here...</h4>
+                           
+                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.&nbsp;<br>Nullam id dolor id nibh ultricies vehicula ut id
+                                elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
+                                egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor
+                                id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo
+                                odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                                <p>
+                                
+                                <a href="{% url 'happening' 'whatishappening' %}">Back to What is Happening&nbsp;<i class="fa fa-angle-double-right"></i></a> 
+                                </p>
+                                
+                                </p>
+                         
+                         {% endifequal %} 
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <div class="jumbotron inside-buttom">
+        <p></p>
+    </div>

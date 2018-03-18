@@ -281,7 +281,7 @@ section h4 {
 }
 
 .rider-link a.btn {
-  border:2px solid #fccc4e;
+  border:2px solid #d75608;
   border-radius:16px;
   color:#5a5a5a;
   padding:4px;
@@ -299,7 +299,7 @@ section h4 {
 }
 
 .article-seeall a.btn {
-  border:2px solid #fccc4e;
+  border:2px solid #d75608;
   border-radius:16px;
   color:#5a5a5a;
   padding:4px;
@@ -819,7 +819,6 @@ ul.inner-menu-list li a {
 
 .what-is-details h5 {
   color:#000;
-  /*font-weight:800;*/
   font-size:1.1em;
   margin:0;
   font-family:'Ubuntu';
@@ -860,7 +859,7 @@ ul.inner-menu-list li a {
   padding-bottom:0;
 }
 
-.card {
+.card.acc-card {
   border:1px solid rgb(252,204,78);
   margin-bottom:4px;
 }
@@ -910,31 +909,99 @@ ul.inner-menu-list li a {
   border-radius:0;
 }
 
+.leadership-image {
+  width:150px;
+  border-radius:50%;
+  border:1px solid rgba(0,0,0,0.31);
+}
 
-.jumbotron.buttom.home h1 {
-  /*text-shadow:2px 2px 4px #000000;*/
+.leader-content-wrapper {
+  margin:auto;
+  padding:0 25px;
+}
+
+.leader-email {
+  display:block;
+  font-size:.9em;
+}
+
+.leader-email a {
+  font-weight:normal;
+}
+
+.leader-position {
+  display:block;
+  line-height:1em;
+  font-size:.9em;
+}
+
+.leader-name {
+  font-weight:600;
+  margin-bottom:.2em;
+  display:block;
   font-family:'Ubuntu';
-  font-weight:800;
 }
 
-.story-card {
-  font-size:1em;
+.leadership-card {
+  margin:10px 0;
+}
+
+.row.leader-details-wrapper {
+  background-color:rgba(0,0,0,0.1);
+  margin:10px 0;
+  min-height:70px;
+  padding:10px 5px;
+}
+
+.leader-details {
+  font-size:.8em;
+}
+
+.mb-2 span {
+  display:inline-block;
+  margin:0 5px;
+}
+
+.devotion-image {
+  width:200px;
+  float:left;
+  padding-right:3px;
+  height:120px;
+  overflow:hidden;
+}
+
+.devotion-details-image {
+  width:400px;
+  float:left;
+  margin:0 10px 0 0;
+}
+
+@media (max-width: 574px) {
+  .devotion-details-image {
+    width:300px;
+    float:none;
+  }
+}
+
+.building-img {
+  width:100%;
+}
+
+.bottom-donate {
+  margin:10px auto;
+}
+
+
+.disp-text a:hover {
   color:#fff;
-  padding:2px;
+  font-weight:normal;
 }
 
-.story-link {
-  text-align:center;
+.disp-text a {
+  color:#fff;
+  font-weight:normal;
 }
 
-.jumbosection {
-  background-image:url(../core/img/bible-behind-pew.png);
-  padding:0px;
-}
-
-.one {
-  height:10px;
-}
 
 .jumbotron.inside-buttom {
   background-image:url(../core/img/bg.png);
@@ -954,4 +1021,17 @@ ul.inner-menu-list li a {
   box-shadow:2px 5px 4px #888;
 }
 
+.site-calendar-card {
+  margin-bottom:10px;
+}
 
+.site-calendar-card h4 {
+  border-bottom:1px solid #d75608;
+  text-align:left;
+}
+
+.img-fluid.album-gallery {
+  height:150px;
+  overflow:hidden;
+  width:100%;
+}

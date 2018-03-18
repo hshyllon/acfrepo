@@ -7,3 +7,28 @@
     width:100%;
   }
 }
+
+.jumbotron.buttom.home h1 {
+  /*text-shadow:2px 2px 4px #000000;*/
+  font-family:'Ubuntu';
+  font-weight:800;
+}
+
+.story-card {
+  font-size:1em;
+  color:#fff;
+  padding:2px;
+}
+
+.story-link {
+  text-align:center;
+}
+
+.jumbosection {
+  background-image:url(../core/img/bible-behind-pew.png);
+  padding:0px;
+}
+
+.one {
+  height:10px;
+}

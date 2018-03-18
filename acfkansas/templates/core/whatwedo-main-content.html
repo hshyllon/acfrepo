@@ -1,0 +1,41 @@
+{% load staticfiles %}
+
+ 
+ <div class="jumbotron inner-jumbo">
+        <h1 class="inner-jumbo-title"><i class="fa fa-caret-left"></i>
+&nbsp;What we do&nbsp;
+
+	<i class="fa fa-caret-right"></i></h1>
+    </div>
+   
+   <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 inner-main-panel">
+                    <div class="card site-calendar-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Fellowship, Food &amp; Fun</h4>
+                            <p class="card-text"><img src="{% static 'core/img/acfkc-smiling-1.png'  %}" class="devotion-details-image">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                        </div>
+                    </div>
+                    <div class="card site-calendar-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Praise &amp; Worship</h4>
+                            <p class="card-text"><img src="{% static 'core/img/acfkc-smiling-1.png'  %}" class="devotion-details-image">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                        </div>
+                    </div>
+                    <div class="card site-calendar-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Community &amp; Service</h4>
+                            <p class="card-text"><img src="{% static 'core/img/acfkc-smiling-1.png'  %}" class="devotion-details-image">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                        </div>
+                    </div>
+                </div>
+              <!-- Insert your right panel Here --> 
+              {% include "core/inner-right-panel.html" %}
+            </div>
+        </div>
+    </section>
+    <div class="jumbotron inside-buttom">
+        <p></p>
+    </div>

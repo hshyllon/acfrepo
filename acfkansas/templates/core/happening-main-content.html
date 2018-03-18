@@ -1,0 +1,60 @@
+{% load staticfiles %}
+
+ 
+ <div class="jumbotron inner-jumbo">
+        <h1 class="inner-jumbo-title"><i class="fa fa-caret-left"></i>
+
+		{% ifequal happening_type 'whatishappening' %}&nbsp;What is Happening&nbsp;{% endifequal %}
+		{% ifequal happening_type 'upcoming' %}&nbsp;Upcoming Events&nbsp;{% endifequal %} 
+
+
+
+	<i class="fa fa-caret-right"></i></h1>
+    </div>
+    <section class="jumbosection"></section>
+    <div class="inner-menu">
+        <div class="container inner-menu-container">
+            <ul class="inner-menu-list">
+            {% ifequal happening_type 'whatishappening' %}
+                <li><a href="{% url 'happening' 'whatishappening' %}" class="active">What is Happening</a></li>
+            {% else %}
+            	<li><a href="{% url 'happening' 'whatishappening' %}">What is Happening</a></li>
+            {% endifequal %}
+            {% ifequal happening_type 'upcoming' %}
+                <li><a href="{% url 'happening' 'upcoming' %}" class="active" >Upcoming Events</a></li>
+                {% else %}
+                <li><a href="{% url 'happening' 'upcoming' %}">Upcoming Events</a></li>
+                {% endifequal %}
+                
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 inner-main-panel">
+                    <div class="inner-content-div">
+                    {% ifequal happening_type 'whatishappening' %}
+                 
+                    <!-- Insert upcoming content Here --> 
+                        {% include "core/happening-whatishappening-content.html" %}
+                    {% endifequal %}  
+                    
+                    {% ifequal happening_type 'upcoming' %}
+                    <!-- Insert upcoming content Here --> 
+                        {% include "core/happening-upcoming-content.html" %}
+                    {% endifequal %}  
+                     
+                    </div>
+                </div>
+                
+                
+             <!-- Insert your right panel Here --> 
+              {% include "core/inner-right-panel.html" %}
+              
+            </div>
+        </div>
+    </section>
+    <div class="jumbotron inside-buttom">
+        <p></p>
+    </div>
