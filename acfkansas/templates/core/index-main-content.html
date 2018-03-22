@@ -5,20 +5,20 @@
             <div class="carousel-item"><img class="w-100 d-block" src="{% static 'core/img/acfbannerNew.png'  %}" alt="Slide Image">
                 <div class="carousel-caption">
                     <h3 id="first-caption">Welcome to&nbsp;<span id="acf-mw-name">ACF KC Metro Chapter</span></h3>
-                    <p class="caption-rider"><a href="#" class="btn">Learn more&nbsp;<i class="icon ion-arrow-right-b"></i></a></p>
+                    <p class="caption-rider"><a href="{% url 'about' 'mission' %}" class="btn">Learn more&nbsp;<i class="icon ion-arrow-right-b"></i></a></p>
                 </div>
             </div>
             <div class="carousel-item active"><img class="w-100 d-block" src="{% static 'core/img/acfbannerNewbrwn.png'  %}" alt="Slide Image">
                 <div class="carousel-caption">
                     <h3 id="second-caption">we are a <span>christian community that empower Africans</span>to impact africa and their generation</h3>
                     <h3 id="second-caption-replace"><span>we empower Africans to impact Africa and their generation</span></h3>
-                    <p class="caption-rider"><a href="#" class="btn">Learn more&nbsp;<i class="icon ion-arrow-right-b"></i></a></p>
+                    <p class="caption-rider"><a href="{% url 'ministry' 'missions' %}" class="btn">Learn more&nbsp;<i class="icon ion-arrow-right-b"></i></a></p>
                 </div>
             </div>
-            <div class="carousel-item"><img class="w-100 d-block" src="{% static 'core/img/acfbannerNewbl.png'  %}" alt="Slide Image">
+            <div class="carousel-item"><img class="w-100 d-block" src="{% static 'core/img/acfbannerNewbl.png' %}" alt="Slide Image">
                 <div class="carousel-caption">
                     <h3 id="third-caption" class="join-us">Join us today!</h3>
-                    <p class="caption-rider"><a href="#" class="btn">Who can be a member<i class="icon ion-arrow-right-b"></i></a></p>
+                    <p class="caption-rider"><a href="{% url 'about' 'member' %}" class="btn">Who can be a member<i class="icon ion-arrow-right-b"></i></a></p>
                 </div>
             </div>
         </div>
@@ -232,7 +232,7 @@
                     <article></article>
                 </div>
                 <div class="col-12">
-                    <p class="article-seeall"><a href="#" class="btn">See all devotions</a></p>
+                    <p class="article-seeall"><a href="{% url 'resources' 'devotion' %}" class="btn">See all devotions</a></p>
                 </div>
             </div>
         </div>
