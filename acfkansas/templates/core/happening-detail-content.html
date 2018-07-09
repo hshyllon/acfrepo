@@ -1,5 +1,14 @@
 {% load staticfiles %}
-     
+ <div class="jumbotron inner-jumbo">
+        <h1 class="inner-jumbo-title"><i class="fa fa-caret-left"></i>
+
+		{% ifequal happeningdetail_type 'whatishappening' %}&nbsp;{{ get_happeningdetail.happening_thing_title }}&nbsp;{% endifequal %}
+		{% ifequal happeningdetail_type 'upcoming' %}&nbsp;{{get_happeningdetail.event_title}}&nbsp;{% endifequal %} 
+
+
+
+	<i class="fa fa-caret-right"></i></h1>
+</div>
      <section>
         <div class="container">
             <div class="row">
@@ -7,39 +16,39 @@
                     <div class="card site-calendar-card">
                         <div class="card-body">
                         {% ifequal happeningdetail_type 'upcoming' %}
-                            <h4 class="card-title">Upcoming Event Title Here...</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.&nbsp;<br>Nullam id dolor id nibh ultricies vehicula ut id
-                                elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
-                                egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor
-                                id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo
-                                odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-                                <p>
-                                
-                                <a href="{% url 'happening' 'upcoming' %}">Back to Upcoming Events&nbsp;<i class="fa fa-angle-double-right"></i></a> 
+                            <h5 class="card-title">{{get_happeningdetail.event_title}}</h5>
+                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>{{get_happeningdetail.start_day}}</span>&nbsp;<i class="fa fa-clock-o"></i><span>{{get_happeningdetail.start_day_start_time}} - {{get_happeningdetail.start_day_end_time}}</span></h6>
+                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>{{get_happeningdetail.end_day}}</span>&nbsp;<i class="fa fa-clock-o"></i><span>{{get_happeningdetail.end_day_start_time}} - {{get_happeningdetail.end_day_end_time}}</span></h6>
+                            {% if get_happeningdetail.adult_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">${{get_happeningdetail.adult_cost}}</span><span></span></h6>
+                            {% endif %}
+                            {% if get_happeningdetail.youth_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">${{get_happeningdetail.youth_cost}}</span><span></span></h6>
+                            {% endif %}
+                            {% if get_happeningdetail.children_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">${{get_happeningdetail.children_cost}}</span><span></span></h6>
+                            {% endif %}
+                            <p class="card-text">
+                            	{{get_happeningdetail.event_note}}
+                                <p>                               
+                                <a href="{% url 'core:happening' 'upcoming' %}"><i class="fa fa-angle-double-left"></i> Back to Upcoming Events&nbsp;</a> 
                                 </p>
                                 
-                                </p>
+                              </p>
                          {% endifequal %} 
                          
                          
                          {% ifequal happeningdetail_type 'whatishappening' %}
-                         <h4 class="card-title">What is happening Title Here...</h4>
-                           
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.&nbsp;<br>Nullam id dolor id nibh ultricies vehicula ut id
-                                elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
-                                egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor
-                                id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo
-                                odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                         <h5 class="card-title">{{ get_happeningdetail.happening_thing_title }}</h5>
+                         <h6 class="text-muted card-subtitle mb-2"><i class="fa fa-calendar"></i><span>{{ get_happeningdetail.frequency }}</span>&nbsp;<i class="fa fa-clock-o"></i><span>{{get_happeningdetail.start_time}} - {{get_happeningdetail.end_time}}</span></h6>
+                           <h6 class="text-muted card-subtitle mb-2"><i class="fa fa-location-arrow"></i> {{ get_happeningdetail.happening_thing_location }}</h6>
+							{% if get_happeningdetail.happening_thing_photo %}
+                         <img class="img-thumbnail" alt="" src="/media/{{get_happeningdetail.happening_thing_photo}}" width = "400px">
+                           {% endif %}
+                            <p class="card-text">{{ get_happeningdetail.happening_thing_note|safe }}
                                 <p>
                                 
-                                <a href="{% url 'happening' 'whatishappening' %}">Back to What is Happening&nbsp;<i class="fa fa-angle-double-right"></i></a> 
+                                <a href="{% url 'core:happening' 'whatishappening' %}"><i class="fa fa-angle-double-left"></i> Back to What is Happening&nbsp;</a> 
                                 </p>
                                 
                                 </p>

@@ -17,25 +17,25 @@
         <div class="container inner-menu-container">
             <ul class="inner-menu-list">
             {% ifequal about_type 'mission' %}
-                <li><a href="{% url 'about' 'mission' %}" class="active">Mission Statement</a></li>
+                <li><a href="{% url 'core:about' 'mission' %}" class="active">Mission Statement</a></li>
             {% else %}
-            	<li><a href="{% url 'about' 'mission' %}">Mission Statement</a></li>
+            	<li><a href="{% url 'core:about' 'mission' %}">Mission Statement</a></li>
             {% endifequal %}
             {% ifequal about_type 'history' %}
-                <li><a href="{% url 'about' 'history' %}" class="active" >Our History</a></li>
+                <li><a href="{% url 'core:about' 'history' %}" class="active" >Our History</a></li>
                 {% else %}
-                <li><a href="{% url 'about' 'history' %}">Our History</a></li>
+                <li><a href="{% url 'core:about' 'history' %}">Our History</a></li>
                 {% endifequal %}
                 {% ifequal about_type 'leadership' %}
-                <li><a href="{% url 'about' 'leadership' %}" class="active" >Our Leadership</a></li>
+                <li><a href="{% url 'core:about' 'leadership' %}" class="active" >Our Leadership</a></li>
                 {% else %}
-                <li><a href="{% url 'about' 'leadership' %}">Our Leadership</a></li>
+                <li><a href="{% url 'core:about' 'leadership' %}">Our Leadership</a></li>
                 {% endifequal %}
                 
                 {% ifequal about_type 'member' %}
-                <li><a href="{% url 'about' 'member' %}" class="active" >Who can be a Member</a></li>
+                <li><a href="{% url 'core:about' 'member' %}" class="active" >Who can be a Member</a></li>
                 {% else %}
-                <li><a href="{% url 'about' 'member' %}">Who can be a Member</a></li>
+                <li><a href="{% url 'core:about' 'member' %}">Who can be a Member</a></li>
                 {% endifequal %}
             </ul>
         </div>

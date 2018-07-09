@@ -13,22 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.conf.urls.static import static
 from django.contrib import admin
-from . import views, settings
+from . import settings
+from core import views
 
 urlpatterns = [
+    url(r'^core/', include('core.urls', namespace='core')),
+    url(r'^profiles/', include('profiles.urls', namespace='profiles')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'), 
-    url(r'^(?P<about_type>[\w]+)/about$', views.about, name='about'),  
-    url(r'^(?P<ministry_type>[\w]+)/ministry$', views.ministry , name='ministry'),   
-    url(r'^contact/$', views.contact , name='contact'), 
-    url(r'^(?P<resources_type>[\w]+)/resources$', views.resources , name='resources'), 
-    url(r'^whatwedo/$', views.whatwedo , name='whatwedo'),
-    url(r'^building/$', views.building , name='building'),
-    url(r'^(?P<happening_type>[\w]+)/happening$', views.happening , name='happening'),
-    url(r'^(?P<happeningdetail_type>[\w]+)/happeningdetail$', views.happeningdetail , name='happeningdetail'),
+    url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^summernote/', include('django_summernote.urls')),
 
     
 ]

@@ -7,21 +7,22 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About<i class="icon ion-ios-arrow-down footer-arrow-down"></i></h3>
                         <ul>
-                            <li><a href="{% url 'about' 'mission' %}">Mission Statement</a></li>
-                            <li><a href="{% url 'about' 'history' %}">History</a></li>
-                            <li><a href="{% url 'about' 'leadership' %}">Leadership</a></li>
-                            <li><a href="{% url 'about' 'member' %}">Who can be a member?</a></li>
-                            <li><a href="{% url 'happening' 'whatishappening' %}">What is happening?</a></li>
-                          	<li><a href="{% url 'happening' 'upcoming' %}">Upcoming Events</a></li>
+                            <li><a href="{% url 'core:about' 'mission' %}">Mission Statement</a></li>
+                            <li><a href="{% url 'core:about' 'history' %}">History</a></li>
+                            <li><a href="{% url 'core:about' 'leadership' %}">Leadership</a></li>
+                            <li><a href="{% url 'core:whatwedo' %}">What we do</a></li>
+                            <li><a href="{% url 'core:about' 'member' %}">Who can be a member</a></li>
+                            <li><a href="{% url 'core:happening' 'whatishappening' %}">What is happening</a></li>
+                          	<li><a href="{% url 'core:happening' 'upcoming' %}">Upcoming Events</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Resources<i class="icon ion-ios-arrow-down footer-arrow-down"></i></h3>
                         <ul>
-                            <li><a href="{% url 'resources' 'devotion' %}">Devotion</a></li>
+                            <li><a href="{% url 'core:resources' 'devotion' %}">Devotion</a></li>
                      
-                            <li><a href="{% url 'resources' 'media' %}">Media</a></li>
-                            <li><a href="{% url 'resources' 'downloads' %}">Download</a></li>
+                            <li><a href="{% url 'core:resources' 'media' %}">Media</a></li>
+                            <li><a href="{% url 'core:resources' 'downloads' %}">Downloads</a></li>
                
                         </ul>
                     </div>

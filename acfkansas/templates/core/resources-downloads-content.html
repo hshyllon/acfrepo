@@ -1,17 +1,26 @@
 {% load staticfiles %}
+{% if get_uploads %}
 
-                  
-                    
-                    <div class="card site-calendar-card">
-                        <div class="card-body">
-                            <h4 class="card-title"><i class="fa fa-cloud-download"></i>&nbsp;ACF KC Metro Constitution</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Uploaded by: Admin | &nbsp;<i class="fa fa-calendar"></i><span>Jan-10-2018</span>&nbsp;</h6><a class="card-link" href="#">Click to Download &nbsp;<i class="fa fa-angle-double-right"></i></a></div>
-                    </div>
-                    
-                    <div class="card site-calendar-card">
-                        <div class="card-body">
-                            <h4 class="card-title"><i class="fa fa-cloud-download"></i>&nbsp;Any other document...</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Uploaded by: Admin | &nbsp;<i class="fa fa-calendar"></i><span>Mar-10-2018</span>&nbsp;</h6><a class="card-link" href="#">Click to Download &nbsp;<i class="fa fa-angle-double-right"></i></a></div>
-                    </div>
-                    
+{% for item in get_uploads %}
+             
+             <!--   #  /media/{{get_happeningdetail.happening_thing_photo}} -->
+<div class="card site-calendar-card">
+    <div class="card-body">
+        <h4 class="card-title"><i class="fa fa-cloud-download"></i>&nbsp;{{ item.document_title }}</h4>
+        <h6 class="text-muted card-subtitle mb-2">Uploaded by: {{item.author}} | &nbsp;<i class="fa fa-calendar"></i><span>{{ item.create_date|date:"M d Y" }}</span>&nbsp;</h6>
+        <p>{{ item.document_description }}
+        </p>
+        
+        <a class="card-link" href="/media/{{item.upload}}">Click to Download &nbsp;<i class="fa fa-angle-double-right"></i></a></div>
+</div>
+
+{% endfor %}
+{% else %}
+	
+<div class="card site-calendar-card">
+    <div class="card-body">
+        <h4 class="card-title"><i class="fa fa-cloud-download"></i> No uploaded document at this time..</h4>
+        
+</div></div>
+{% endif %}
                 

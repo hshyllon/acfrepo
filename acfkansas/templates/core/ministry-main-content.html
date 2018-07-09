@@ -18,31 +18,31 @@
         <div class="container inner-menu-container">
             <ul class="inner-menu-list">
             {% ifequal ministry_type 'children' %}
-                <li><a href="{% url 'ministry' 'children' %}" class="active">Children</a></li>
+                <li><a href="{% url 'core:ministry' 'children' %}" class="active">Children</a></li>
             {% else %}
-            	<li><a href="{% url 'ministry' 'children' %}">Children</a></li>
+            	<li><a href="{% url 'core:ministry' 'children' %}">Children</a></li>
             {% endifequal %}
             {% ifequal ministry_type 'youth' %}
-                <li><a href="{% url 'ministry' 'youth' %}" class="active" >Youth</a></li>
+                <li><a href="{% url 'core:ministry' 'youth' %}" class="active" >Youth</a></li>
                 {% else %}
-                <li><a href="{% url 'ministry' 'youth' %}">Youth</a></li>
+                <li><a href="{% url 'core:ministry' 'youth' %}">Youth</a></li>
                 {% endifequal %}
                 {% ifequal ministry_type 'missions' %}
-                <li><a href="{% url 'ministry' 'missions' %}" class="active" >Missions</a></li>
+                <li><a href="{% url 'core:ministry' 'missions' %}" class="active" >Missions</a></li>
                 {% else %}
-                <li><a href="{% url 'ministry' 'missions' %}">Missions</a></li>
+                <li><a href="{% url 'core:ministry' 'missions' %}">Missions</a></li>
                 {% endifequal %}
                 
                 {% ifequal ministry_type 'worship' %}
-                <li><a href="{% url 'ministry' 'worship' %}" class="active" >Worship &amp; Fellowship</a></li>
+                <li><a href="{% url 'core:ministry' 'worship' %}" class="active" >Worship &amp; Fellowship</a></li>
                 {% else %}
-                <li><a href="{% url 'ministry' 'worship' %}">Worship &amp; Fellowship</a></li>
+                <li><a href="{% url 'core:ministry' 'worship' %}">Worship &amp; Fellowship</a></li>
                 {% endifequal %}
                 
                 {% ifequal ministry_type 'membership' %}
-                <li><a href="{% url 'ministry' 'membership' %}" class="active" >Membership</a></li>
+                <li><a href="{% url 'core:ministry' 'membership' %}" class="active" >Membership</a></li>
                 {% else %}
-                <li><a href="{% url 'ministry' 'membership' %}">Membership</a></li>
+                <li><a href="{% url 'core:ministry' 'membership' %}">Membership</a></li>
                 {% endifequal %}
             </ul>
         </div>
@@ -56,7 +56,7 @@
                     <div class="card site-calendar-card">
                         <div class="card-body">
                         <p class="inner-content-center">
-                        <strong>- add content - </strong>
+                        <strong>- This content will be uploaded soon! - </strong>
                         </p>
                         </div>
                         </div>
@@ -66,7 +66,7 @@
                        <div class="card site-calendar-card">
                         <div class="card-body">
                         <p class="inner-content-center">
-                        <strong>- add content - </strong>
+                        <strong>- This content will be uploaded soon! - </strong>
                         </p>
                         </div>
                         </div>
@@ -76,7 +76,7 @@
                         <div class="card site-calendar-card">
                         <div class="card-body">
                         <p class="inner-content-center">
-                        <strong>- add content - </strong>
+                        <strong>- This content will be uploaded soon!  - </strong>
                         </p>
                         </div>
                         </div>
@@ -85,9 +85,26 @@
                      {% ifequal ministry_type 'worship' %}
                        <div class="card site-calendar-card">
                         <div class="card-body">
-                        <p class="inner-content-center">
-                        <strong>- add content - </strong>
-                        </p>
+                        <div class="inner-content-pages">
+                        
+                       <p> In ACFKC Metro Chapter, we believe in ushering in the presence of God and setting the tone of our monthly meetings with songs of praises. We believe that the atmosphere of praise and worship brings forth joy, peace, encouragement, healing and restoration. This is why the first thirty minutes of our meetings is dedicated to singing, dancing and making melody to the Lord. 
+We have been blessed in our chapter with members who are anointed and gifted in singing and playing instruments. 
+</p><p>
+Our praise and worship team comprises of men and women who have volunteered their time and talent to lead worship songs during our meetings. 
+Our goal and desire is for our worship time to be inclusive and reflective of the diversity in our fellowship. As led by the Holy spirit, we honor God and our African roots with our songs and style of music. Inclusion of songs from different parts of Africa give our members a little taste of home and a sense of belonging. Overall, our worship time includes a blended style of worship from common hymns to modern contemporary songs. 
+</p><p>
+If you are looking for an opportunity to serve God with your vocal gifts or you can play an instrument, you are welcome to join us. Please contact Sis Bukky Faseru 913-991-8709.
+God bless you!</p>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        </div>
                         </div>
                         </div>
                     {% endifequal %} 
@@ -96,7 +113,7 @@
                       <div class="card site-calendar-card">
                         <div class="card-body">
                         <p class="inner-content-center">
-                        <strong>- add content - </strong>
+                        <strong>- This content will be uploaded soon! - </strong>
                         </p>
                         </div>
                         </div>
@@ -113,6 +130,7 @@
             </div>
         </div>
     </section>
+    
     <div class="jumbotron inside-buttom">
         <p></p>
     </div>

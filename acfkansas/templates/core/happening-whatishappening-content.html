@@ -1,32 +1,25 @@
 {% load staticfiles %}
 
+{% if get_all_things_happening %}
+	{% for item in get_all_things_happening %}
                     <div class="card site-calendar-card">
                         <div class="card-body">
-                            <h4 class="card-title">ACFKC Monthly Gatherings</h4>
-                           
-                            <p class="card-text">We gather monthly to fellowship .....</p>
-                            <a class="card-link" href="{% url 'happeningdetail' 'whatishappening' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
-                    </div>
-                    <div class="card site-calendar-card">
-                        <div class="card-body">
-                            <h4 class="card-title">ACFKC Monthly Prayers</h4>
+                            <h4 class="card-title">{{item.happening_thing_title}}</h4>
                             
-                            <p class="card-text">We hold Monthly prayers on .... </p>
-                            <a class="card-link" href="{% url 'happeningdetail' 'whatishappening' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
+                            
+                            <h6 class="text-muted card-subtitle mb-2"><i class="fa fa-calendar"></i><span>{{ item.frequency }}</span>&nbsp;<i class="fa fa-clock-o"></i><span>{{item.start_time}} - {{item.end_time}}</span></h6>
+                           <h6 class="text-muted card-subtitle mb-2"><i class="fa fa-location-arrow"></i> {{ item.happening_thing_location }}</h6>
+                           
+                           {% if item.adult_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">${{ item.adult_cost }}</span></h6>
+                            {% endif %}
+                            {% if item.youth_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">${{ item.youth_cost }}</span></h6>
+                            {% endif %}
+                            {% if item.children_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">${{ item.children_cost}}</span></h6>
+                            {% endif %}
+                            <p class="card-text"> {{item.happening_thing_note|truncatewords:"20"|safe}} </p><a class="card-link" href="{% url 'core:happeningdetail' 'whatishappening' item.id %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
                     </div>
-                    <div class="card site-calendar-card">
-                        <div class="card-body">
-                            <h4 class="card-title">ACFKC Annual Picnic</h4>
-                            <p class="card-text">We hold annual picnic during Summer ....</p>
-                            <a class="card-link" href="{% url 'happeningdetail' 'whatishappening' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
-                    </div>
-                    <div class="card site-calendar-card">
-                        <div class="card-body">
-                            <h4 class="card-title">Other things we do routinely ....</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><a class="card-link" href="{% url 'happeningdetail' 'whatishappening' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
-                    </div>
+      {% endfor %}
+{% endif %}

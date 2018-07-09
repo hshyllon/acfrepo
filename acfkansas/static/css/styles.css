@@ -730,6 +730,12 @@ ul.inner-menu-list li a {
   margin:30px;
 }
 
+.inner-content-pages {
+  font-size:1.3em;
+  font-weight:normal;
+  margin:30px;
+}
+
 @media (max-width: 766px) {
   .inner-content-center {
     margin:10px;
@@ -903,7 +909,7 @@ ul.inner-menu-list li a {
 
 .leader-email {
   display:block;
-  font-size:.8em;
+  font-size:1em;
 }
 
 .leader-email a {
@@ -913,13 +919,14 @@ ul.inner-menu-list li a {
 .leader-position {
   display:block;
   line-height:1em;
-  font-size:.8em;
+  font-size:1em;
 }
 
 .leader-name {
   font-weight:400;
   margin-bottom:.2em;
   display:block;
+  font-size:1.2em;
   font-family:'Ubuntu';
 }
 
@@ -935,7 +942,7 @@ ul.inner-menu-list li a {
 }
 
 .leader-details {
-  font-size:.8em;
+  font-size:1em;
 }
 
 .mb-2 span {
@@ -998,4 +1005,15 @@ ul.inner-menu-list li a {
 
 .site-calendar-card {
   margin-bottom:10px;
+}
+
+.col-sm-12.col-md-12.col-lg-4.col-xl-4.upcoming-events {
+  background-color:rgba(49,55,58,0.03);
+  border:1px solid #ffffff;
+  border-radius:5px;
+  box-shadow:2px 5px 4px #888;
+}
+
+.history-page {
+  font-size:1.1em;
 }

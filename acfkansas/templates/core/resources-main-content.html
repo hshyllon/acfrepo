@@ -14,21 +14,21 @@
             <ul class="inner-menu-list">
 
             {% ifequal resources_type 'devotion' %}
-                <li><a href="{% url 'resources' 'devotion' %}" class="active">Devotion</a></li>
+                <li><a href="{% url 'core:resources' 'devotion' %}" class="active">Devotion</a></li>
             {% else %}
-            	<li><a href="{% url 'resources' 'devotion' %}">Devotion</a></li>
+            	<li><a href="{% url 'core:resources' 'devotion' %}">Devotion</a></li>
             {% endifequal %}
             
             {% ifequal resources_type 'media' %}
-                <li><a href="{% url 'resources' 'media' %}" class="active">Media</a></li>
+                <li><a href="{% url 'core:resources' 'media' %}" class="active">Media</a></li>
             {% else %}
-            	<li><a href="{% url 'resources' 'media' %}">Media</a></li>
+            	<li><a href="{% url 'core:resources' 'media' %}">Media</a></li>
             {% endifequal %}
             
             {% ifequal resources_type 'downloads' %}
-                <li><a href="{% url 'resources' 'downloads' %}" class="active">Downloads</a></li>
+                <li><a href="{% url 'core:resources' 'downloads' %}" class="active">Downloads</a></li>
             {% else %}
-            	<li><a href="{% url 'resources' 'downloads' %}">Downloads</a></li>
+            	<li><a href="{% url 'core:resources' 'downloads' %}">Downloads</a></li>
             {% endifequal %}
 			</ul>
         </div>
@@ -41,19 +41,29 @@
                 <h2 class="text-center">ACF Media Gallery</h2>
                 <p class="text-center">Enjoy our media gallery! Explore videos and image albums of our past events. </p>
             </div>
-            <div class="row photos">
-            	<div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/newyear-party.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/newyear-party.png'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/malawi.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/malawi.png'  %}"></a></div>
-                
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-01.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-01.png'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-02.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-02.png'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-03.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-03.png'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-04.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-04.png'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-05.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-05.png'  %}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-06.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-06.png'  %}"></a></div>
-            	<div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% static 'core/img/album-07.png'  %}" data-lightbox="photos"><img class="img-fluid album-gallery" src="{% static 'core/img/album-07.png'  %}"></a></div>
             
+            {% if get_album %}
+            <div class="row photos">
+            	{% for item in get_album %}
+                
+	                {% for image in get_album_cover %}
+	                
+	                	{% if item.id == image.pic_album.id %}
+	                		
+	                		
+ <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{% url 'core:albumgallery' item.id %}"> <img class="img-fluid album-gallery" src="/media/{{image.pic}}">
+ </a>
+ <p> <a href="{% url 'core:albumgallery' item.id %}">{{ item.album_desc }}</a></p>
+ </div>
+                
+	                		
+	                	{% endif %}
+	                
+	                {% endfor %}
+                {% endfor %}
+                
             </div>
+            {% endif %}
         </div>
     </div>
     <section></section>

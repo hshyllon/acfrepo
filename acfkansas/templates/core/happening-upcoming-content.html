@@ -1,48 +1,26 @@
 {% load staticfiles %}
 
-
+{% if all_valid_upcomingevents %}
+	{% for event in all_valid_upcomingevents %}
                     <div class="card site-calendar-card">
                         <div class="card-body">
-                            <h4 class="card-title">ACF MidWest Regional Conference</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            <a class="card-link" href="{% url 'happeningdetail' 'upcoming' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
+                            <h4 class="card-title">{{ event.event_title }}</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>	{{ event.start_day }}`</span> | <i class="fa fa-clock-o"></i>
+                            <span>{{ event.start_day_start_time }} - {{ event.start_day_end_time  }}</span></h6>
+                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>{{ event.end_day }}</span> | <i class="fa fa-clock-o"></i>
+                            <span>{{ event.end_day_start_time }} - {{ event.end_day_end_time }} </span></h6>
+                            {% if event.adult_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">${{ event.adult_cost }}</span><span></span></h6>
+                            {% endif %}
+                            {% if event.youth_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">${{ event.youth_cost }}</span><span></span></h6>
+                            {% endif %}
+                            {% if event.children_cost %}
+                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">${{ event.children_cost }}</span><span></span></h6>
+                            {% endif %}
+                            
+                            <p class="card-text"> {{ event.event_note|truncatewords:"20"}} </p>
+                            <a class="card-link" href="{% url 'core:happeningdetail' 'upcoming' event.id %}">See Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
                     </div>
-                    <div class="card site-calendar-card">
-                        <div class="card-body">
-                            <h4 class="card-title">ACF National Youth Convention</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            <a class="card-link" href="{% url 'happeningdetail' 'upcoming' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
-                    </div>
-                    <div class="card site-calendar-card">
-                        <div class="card-body">
-                            <h4 class="card-title">ACF Missions to Malawi</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            <a class="card-link" href="{% url 'happeningdetail' 'upcoming' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
-                    </div>
-                    <div class="card site-calendar-card">
-                        <div class="card-body">
-                            <h4 class="card-title">Other Events coming up soon that we plan to make visible ....</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Start :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">End :&nbsp;<i class="fa fa-calendar"></i><span>May-10-2018</span>&nbsp;<i class="fa fa-clock-o"></i><span>10:00 AM - 5:00 PM</span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (adults):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (youth):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <h6 class="text-muted card-subtitle mb-2">Registration (kids):&nbsp;&nbsp;<span class="badge badge-dark">$150</span><span></span></h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            <a class="card-link" href="{% url 'happeningdetail' 'upcoming' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
-                    </div>
-            
+ 	{% endfor %}
+ {% endif %}                   

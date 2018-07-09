@@ -9,33 +9,31 @@
                         </div>
                         <div class="what-is-divider"></div>
                         <div class="what-is-content">
-                            <p><a href="{% url 'happeningdetail' 'whatishappening' %}"><i class="fa fa-long-arrow-right"></i>&nbsp;ACFKC Monthly Gatherings</a></p>
-                            <p><a href="{% url 'happeningdetail' 'whatishappening' %}"><i class="fa fa-long-arrow-right"></i>&nbsp;ACFKC Monthly Prayers</a></p>
-                            <p><a href="{% url 'happeningdetail' 'whatishappening' %}"><i class="fa fa-long-arrow-right"></i>&nbsp;ACFKC Annual Picnic</a></p>
-                            <p><a href="{% url 'happeningdetail' 'whatishappening' %}"><i class="fa fa-long-arrow-right"></i>&nbsp;Other things we do routinely ....</a></p>
+                        {% if inner_things_happening %}
+                        	{% for item in inner_things_happening %}
+                            <p><a href="{% url 'core:happeningdetail' 'whatishappening' item.id %}"><i class="fa fa-long-arrow-right"></i>&nbsp;{{ item.happening_thing_title }}</a></p>
+                            {% endfor %}
+                         {% else %}
+                         <p>ACF activities will be updated soon!</p>
+                        {% endif %}
                         </div>
                     </div>
                     <div class="inner-updates-right">
                         <h4>UPCOMING</h4>
                         <div class="inner-upcoming-card first">
-                            <p class="inner-upcoming-title">ACF MidWest Regional Conference</p>
-                            <p class="inner-upcoming-rider">FEB-22 2018| 10.30AM - 10:00PM | Overland Park, KS&nbsp;</p>
-                            <p class="inner-upcoming-rider"><a href="{% url 'happeningdetail' 'upcoming' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a></p>
+                        
+                        {% if inner_right_upcoming %}
+                        	 {% for event in inner_right_upcoming %}
+                            <p class="inner-upcoming-title">{{event.event_title|title}}</p>
+                            <p class="inner-upcoming-rider">{{event.start_day}} | {{event.start_day_start_time}} - {{event.start_day_end_time}} | {{event.location}}</p>
+                            <p class="inner-upcoming-rider"><a href="{% url 'core:happeningdetail' 'upcoming' event.id %}">Details&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a></p>
+                            {% endfor %}
+                            
+                         {% else %}
+                         <p class="inner-upcoming-title">Exciting events are coming soon! </p>
+                         
+                        {% endif %}
                         </div>
-                        <div class="inner-upcoming-card">
-                            <p class="inner-upcoming-title">ACF National Youth Convention<br></p>
-                            <p class="inner-upcoming-rider">FEB-22 2018| 10.30AM - 10:00PM | Overland Park, KS&nbsp;</p>
-                            <p class="inner-upcoming-rider"><a href="{% url 'happeningdetail' 'upcoming' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a></p>
-                        </div>
-                        <div class="inner-upcoming-card">
-                            <p class="inner-upcoming-title">ACF Missions to Malawi<br></p>
-                            <p class="inner-upcoming-rider">FEB-22 2018| 10.30AM - 10:00PM | Overland Park, KS&nbsp;</p>
-                            <p class="inner-upcoming-rider"><a href="{% url 'happeningdetail' 'upcoming' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a></p>
-                        </div>
-                        <div class="inner-upcoming-card">
-                            <p class="inner-upcoming-title">2018 ACF National Conference</p>
-                            <p class="inner-upcoming-rider">FEB-22 2018| 10.30AM - 10:00PM | Overland Park, KS&nbsp;</p>
-                            <p class="inner-upcoming-rider"><a href="{% url 'happeningdetail' 'upcoming' %}">Details&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a></p>
-                        </div>
+                        
                     </div>
                 </div>
